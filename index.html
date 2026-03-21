@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── PRIMARY SEO ── -->
+<title>Priyanshu Khale | Zoho Developer Mumbai | Zoho Creator CRM Analytics Expert</title>
+<meta name="description" content="Priyanshu Khale is a Zoho Developer based in Mumbai, India with 3+ years of experience building Zoho Creator apps, CRM automation, and Analytics dashboards. Available for freelance and full-time opportunities.">
+<meta name="keywords" content="Zoho Developer Mumbai, Zoho Creator Developer, Zoho CRM Expert, Zoho Analytics, Zoho One, Deluge Script, Zoho Developer India, Priyanshu Khale, Zoho Freelancer Mumbai">
+<meta name="author" content="Priyanshu Khale">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://priyanshukhale.netlify.app/">
+
+<!-- ── GOOGLE SEARCH CONSOLE VERIFICATION ── -->
+<meta name="google-site-verification" content="google-site-verification=oabgPcBoBhIh0IAA3skIiVO1rG0LVyqqnnPfEkTlp_g">
+
+<!-- ── OPEN GRAPH (WhatsApp, LinkedIn, Facebook preview) ── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://priyanshukhale.netlify.app/">
+<meta property="og:title" content="Priyanshu Khale | Zoho Developer Mumbai">
+<meta property="og:description" content="3+ years building Zoho Creator apps, CRM automation & Analytics dashboards. Based in Mumbai, India. Available for new projects.">
+<meta property="og:image" content="https://priyanshukhale.netlify.app/og-preview.png">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Priyanshu Khale Portfolio">
+
+<!-- ── TWITTER CARD ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Priyanshu Khale | Zoho Developer Mumbai">
+<meta name="twitter:description" content="3+ years building Zoho Creator apps, CRM automation & Analytics dashboards. Based in Mumbai, India.">
+<meta name="twitter:image" content="https://priyanshukhale.netlify.app/og-preview.png">
+
+<!-- ── STRUCTURED DATA (Google Rich Results) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Priyanshu Khale",
+  "jobTitle": "Zoho Developer",
+  "description": "Zoho Developer with 3+ years of experience in Zoho Creator, CRM, Analytics and Zoho One applications. Based in Mumbai, India.",
+  "url": "https://priyanshukhale.netlify.app/",
+  "telephone": "+919869571994",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/priyanshu-khale-a25777222/"
+  ],
+  "knowsAbout": ["Zoho Creator","Zoho CRM","Zoho Analytics","Zoho One","Deluge Script","Business Automation"]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root{
+  --bg:#040404;
+  --bg2:#080808;
+  --bg3:#0f0f0f;
+  --bg4:#161616;
+  --amber:#E8820C;
+  --amber2:#FFB347;
+  --amber3:rgba(232,130,12,0.12);
+  --amber4:rgba(232,130,12,0.06);
+  --ink:#F5ECD7;
+  --ink2:#8A7D6A;
+  --ink3:#3D3528;
+  --rule:rgba(255,255,255,0.06);
+  --f1:'Bebas Neue',sans-serif;
+  --f2:'DM Sans',sans-serif;
+  --f3:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--f2);overflow-x:hidden;cursor:none;}
+
+/* ── NOISE OVERLAY ── */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9000;opacity:0.4;
+}
+
+/* ── CUSTOM CURSOR ── */
+#cur{position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;}
+#cur-dot{width:8px;height:8px;background:var(--amber2);border-radius:50%;transform:translate(-50%,-50%);}
+#cur-ring{position:fixed;pointer-events:none;z-index:9998;
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(232,130,12,0.5);
+  transform:translate(-50%,-50%);
+  transition:width .3s,height .3s,border-color .3s;
+}
+body:has(a:hover) #cur-ring,
+body:has(button:hover) #cur-ring{width:60px;height:60px;border-color:var(--amber);}
+
+/* ── LOADER ── */
+#loader{
+  position:fixed;inset:0;background:var(--bg);z-index:99999;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+}
+#loader.out{animation:ldrOut 0.7s cubic-bezier(.4,0,.2,1) forwards;}
+@keyframes ldrOut{to{opacity:0;transform:scale(1.03);pointer-events:none;visibility:hidden;}}
+.ldr-stage{min-height:5rem;display:flex;align-items:center;justify-content:center;width:320px;}
+.ldr-fw{position:absolute;font-family:var(--f3);font-size:clamp(1.8rem,5vw,3rem);color:var(--amber);
+  letter-spacing:.06em;text-align:center;white-space:nowrap;
+  opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;pointer-events:none;}
+.ldr-fw.show{opacity:1;transform:translateY(0);}
+.ldr-fw.out{opacity:0;transform:translateY(-10px);}
+#ldrType{font-family:var(--f3);font-size:clamp(1.8rem,5vw,3rem);color:var(--amber);
+  letter-spacing:.06em;display:none;}
+.ldr-caret{display:inline-block;width:2px;height:.85em;background:var(--amber);vertical-align:middle;margin-left:3px;animation:blink .6s step-end infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.ldr-track{width:220px;height:1px;background:var(--ink3);position:relative;overflow:hidden;}
+.ldr-fill{position:absolute;inset-block:0;left:0;width:0;background:var(--amber);transition:width .4s ease;}
+.ldr-label{font-family:var(--f3);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3);}
+.ldr-dots span{animation:dp 1.4s ease-in-out infinite;}
+.ldr-dots span:nth-child(2){animation-delay:.2s;}
+.ldr-dots span:nth-child(3){animation-delay:.4s;}
+@keyframes dp{0%,80%,100%{opacity:.15}40%{opacity:1}}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.4rem 3rem;
+  border-bottom:1px solid transparent;
+  transition:background .4s,border-color .4s,backdrop-filter .4s;
+}
+nav.scrolled{background:rgba(4,4,4,.92);border-color:var(--rule);backdrop-filter:blur(20px);}
+.nav-logo{font-family:var(--f1);font-size:1.4rem;letter-spacing:.12em;color:var(--ink);text-decoration:none;line-height:1;}
+.nav-logo span{color:var(--amber);}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{font-family:var(--f3);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--amber);}
+.nav-cta{font-family:var(--f3);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.55rem 1.4rem;border:1px solid var(--amber);color:var(--amber);text-decoration:none;
+  position:relative;overflow:hidden;transition:color .3s;}
+.nav-cta span{position:relative;z-index:1;}
+.nav-cta::before{content:'';position:absolute;inset:0;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.nav-cta:hover{color:var(--bg);}
+.nav-cta:hover::before{transform:scaleX(1);}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 3rem 4rem;position:relative;overflow:hidden;
+}
+/* Huge ghost name behind */
+.hero-ghost{
+  position:absolute;bottom:-0.1em;left:-.02em;
+  font-family:var(--f1);font-size:clamp(10rem,22vw,22rem);
+  color:transparent;-webkit-text-stroke:1px rgba(232,130,12,0.07);
+  line-height:.85;letter-spacing:-.01em;pointer-events:none;user-select:none;white-space:nowrap;
+}
+.hero-top{
+  position:absolute;top:5rem;left:3rem;right:3rem;
+  display:flex;align-items:flex-start;justify-content:space-between;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--f3);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);border:1px solid rgba(232,130,12,0.3);
+  padding:.35rem .9rem;background:var(--amber4);
+}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);animation:blink 2s infinite;}
+.hero-loc{font-family:var(--f3);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);text-align:right;line-height:1.8;}
+.hero-loc span{display:block;color:var(--ink2);}
+
+.hero-name{
+  font-family:var(--f1);
+  font-size:clamp(5rem,14vw,13rem);
+  line-height:.9;letter-spacing:.01em;
+  color:var(--ink);
+  position:relative;z-index:2;
+  opacity:0;animation:hNameIn .9s .1s cubic-bezier(.16,1,.3,1) forwards;
+}
+.hero-name em{color:var(--amber);font-style:normal;display:block;}
+@keyframes hNameIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+.hero-bottom{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-top:2.5rem;position:relative;z-index:2;
+  border-top:1px solid var(--rule);padding-top:2rem;
+  opacity:0;animation:hNameIn .8s .4s forwards;
+  flex-wrap:wrap;gap:2rem;
+}
+.hero-desc{max-width:440px;font-size:.95rem;color:var(--ink2);line-height:1.8;font-weight:300;}
+.hero-desc strong{color:var(--amber);font-weight:500;}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn-a{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--f3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.75rem 1.6rem;text-decoration:none;
+  background:var(--amber);color:var(--bg);font-weight:500;
+  transition:background .2s,transform .2s;
+}
+.btn-a:hover{background:var(--amber2);transform:translateY(-2px);}
+.btn-b{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--f3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.75rem 1.6rem;text-decoration:none;
+  border:1px solid var(--rule);color:var(--ink2);
+  transition:border-color .2s,color .2s;
+}
+.btn-b:hover{border-color:var(--amber);color:var(--amber);}
+
+/* ── MARQUEE ── */
+.marquee-wrap{
+  overflow:hidden;white-space:nowrap;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:.9rem 0;background:var(--bg2);
+}
+.marquee-track{display:inline-flex;gap:0;animation:marquee 22s linear infinite;}
+.marquee-track:hover{animation-play-state:paused;}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-item{
+  font-family:var(--f1);font-size:1rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink3);padding:0 2.5rem;display:inline-flex;align-items:center;gap:2.5rem;
+  white-space:nowrap;
+}
+.marquee-item span{width:5px;height:5px;border-radius:50%;background:var(--amber);display:inline-block;flex-shrink:0;}
+
+/* ── ABOUT ── */
+#about{background:var(--bg2);position:relative;overflow:hidden;}
+#about::before{
+  content:'03+';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);
+  font-family:var(--f1);font-size:18rem;color:rgba(232,130,12,0.03);
+  line-height:1;pointer-events:none;
+}
+.sec-wrap{max-width:1200px;margin:0 auto;padding:8rem 3rem;}
+.sec-tag{font-family:var(--f3);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;}
+.sec-tag::before{content:'';width:24px;height:1px;background:var(--amber);}
+.sec-h{font-family:var(--f1);font-size:clamp(2.8rem,6vw,5rem);letter-spacing:.03em;line-height:.95;color:var(--ink);margin-bottom:3.5rem;}
+.sec-h em{color:var(--amber);font-style:normal;}
+
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:6rem;align-items:start;}
+.about-body p{font-size:1rem;color:var(--ink2);line-height:1.9;font-weight:300;margin-bottom:1.2rem;}
+.about-body p strong{color:var(--ink);font-weight:500;}
+
+.about-terminal{
+  background:var(--bg3);border:1px solid var(--rule);
+  position:relative;overflow:hidden;
+}
+.about-terminal::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--amber),transparent);opacity:.6;
+}
+.at-bar{display:flex;align-items:center;gap:.5rem;padding:.85rem 1.2rem;border-bottom:1px solid var(--rule);background:rgba(232,130,12,.03);}
+.at-dot{width:8px;height:8px;border-radius:50%;}
+.at-title{font-family:var(--f3);font-size:.62rem;color:var(--ink3);letter-spacing:.1em;margin-left:.4rem;}
+.at-body{padding:1.4rem 1.3rem;}
+.at-row{font-family:var(--f3);font-size:.78rem;line-height:2.1;display:flex;gap:.8rem;color:var(--ink2);}
+.at-p{color:var(--amber);}
+.at-k{color:#5BA4CF;min-width:80px;}
+.at-v{color:var(--ink);}
+.at-v a{color:var(--amber);text-decoration:none;}
+.at-v a:hover{text-decoration:underline;}
+.at-c{color:var(--ink3);font-size:.68rem;}
+
+/* ── SKILLS ── */
+#skills{background:var(--bg);}
+.skills-intro{max-width:600px;margin-bottom:4rem;}
+.skills-intro p{font-size:1rem;color:var(--ink2);line-height:1.8;font-weight:300;}
+
+.skills-hex-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+  overflow:hidden;
+}
+.skill-hex{
+  background:var(--bg2);padding:2.5rem 2rem;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.skill-hex::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--amber),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.skill-hex:hover{background:var(--bg3);}
+.skill-hex:hover::after{transform:scaleX(1);}
+.sh-num{
+  font-family:var(--f1);font-size:4.5rem;color:rgba(232,130,12,.07);
+  line-height:1;margin-bottom:1rem;transition:color .3s;
+}
+.skill-hex:hover .sh-num{color:rgba(232,130,12,.18);}
+.sh-name{font-family:var(--f1);font-size:1.1rem;letter-spacing:.05em;color:var(--ink);margin-bottom:.4rem;}
+.sh-sub{font-size:.82rem;color:var(--ink2);font-weight:300;line-height:1.6;margin-bottom:1.2rem;}
+.sh-bar{height:1px;background:var(--rule);overflow:hidden;position:relative;}
+.sh-fill{position:absolute;inset-block:0;left:0;width:0;background:var(--amber);transition:width 1.3s cubic-bezier(.25,.46,.45,.94);}
+.sh-pct{font-family:var(--f3);font-size:.62rem;color:var(--amber);margin-top:.5rem;opacity:0;transition:opacity .4s;}
+.skill-hex:hover .sh-pct{opacity:1;}
+
+/* ── PROJECTS ── */
+#projects{background:var(--bg2);}
+.proj-list{display:flex;flex-direction:column;gap:0;}
+.proj-row{
+  display:grid;grid-template-columns:5rem 1fr auto;gap:2.5rem;align-items:center;
+  padding:2.2rem 0;border-bottom:1px solid var(--rule);
+  position:relative;overflow:hidden;
+  transition:padding-left .3s;
+  cursor:default;
+}
+.proj-row::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--amber);transform:scaleY(0);transition:transform .3s;
+}
+.proj-row:hover{padding-left:.8rem;}
+.proj-row:hover::before{transform:scaleY(1);}
+.proj-n{font-family:var(--f1);font-size:3rem;color:rgba(232,130,12,.1);line-height:1;transition:color .3s;}
+.proj-row:hover .proj-n{color:rgba(232,130,12,.25);}
+.proj-name{font-family:var(--f1);font-size:1.3rem;letter-spacing:.03em;color:var(--ink);margin-bottom:.3rem;transition:color .3s;}
+.proj-row:hover .proj-name{color:var(--amber);}
+.proj-desc{font-size:.85rem;color:var(--ink2);font-weight:300;line-height:1.6;margin-bottom:.7rem;}
+.proj-pills{display:flex;flex-wrap:wrap;gap:.35rem;}
+.pill{
+  font-family:var(--f3);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.18rem .6rem;border:1px solid var(--rule);color:var(--ink3);
+  transition:border-color .2s,color .2s;
+}
+.proj-row:hover .pill{border-color:rgba(232,130,12,.3);color:var(--amber);}
+.proj-arr{font-family:var(--f3);font-size:.9rem;color:var(--ink3);transition:transform .2s,color .2s;}
+.proj-row:hover .proj-arr{transform:translateX(5px);color:var(--amber);}
+
+/* ── STATS BAND ── */
+.stats-band{
+  background:var(--amber);
+  display:grid;grid-template-columns:repeat(3,1fr);
+  divide:var(--bg);
+}
+.stat-cell{
+  padding:3rem 3rem;border-right:1px solid rgba(0,0,0,.15);
+  text-align:center;
+}
+.stat-cell:last-child{border-right:none;}
+.stat-big{font-family:var(--f1);font-size:4.5rem;color:var(--bg);line-height:1;}
+.stat-lbl{font-family:var(--f3);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(4,4,4,.5);margin-top:.4rem;}
+
+/* ── CONTACT ── */
+#contact{background:var(--bg);position:relative;overflow:hidden;}
+#contact::before{
+  content:'HELLO';position:absolute;right:-2rem;bottom:-2rem;
+  font-family:var(--f1);font-size:20rem;color:rgba(232,130,12,.03);
+  line-height:1;pointer-events:none;
+}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.contact-big{font-family:var(--f1);font-size:clamp(3rem,8vw,7rem);line-height:.9;letter-spacing:.02em;color:var(--ink);margin-bottom:1.5rem;}
+.contact-big em{color:var(--amber);font-style:normal;display:block;}
+.contact-sub{font-size:.95rem;color:var(--ink2);font-weight:300;line-height:1.85;margin-bottom:2.5rem;max-width:400px;}
+.contact-links{display:flex;flex-direction:column;gap:1px;background:var(--rule);}
+.clink{
+  display:flex;align-items:center;gap:1.3rem;
+  background:var(--bg3);padding:1.4rem 1.5rem;
+  text-decoration:none;color:var(--ink);
+  border-left:2px solid transparent;
+  transition:background .2s,border-color .2s;
+}
+.clink:hover{background:var(--bg4);border-left-color:var(--amber);}
+.clink-ico{
+  width:44px;height:44px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;background:var(--amber4);transition:border-color .2s,background .2s;
+}
+.clink:hover .clink-ico{border-color:var(--amber);background:var(--amber3);}
+.clink-title{font-family:var(--f1);font-size:.9rem;letter-spacing:.05em;color:var(--ink);}
+.clink-val{font-family:var(--f3);font-size:.7rem;color:var(--ink2);margin-top:.1rem;}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--bg);
+  border-top:1px solid var(--rule);
+  padding:2rem 3rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.foot-copy{font-family:var(--f3);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);}
+.foot-copy span{color:var(--amber);}
+.foot-live{display:flex;align-items:center;gap:.5rem;font-family:var(--f3);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#3DBA5F;box-shadow:0 0 8px rgba(61,186,95,.7);animation:blink 2.5s infinite;}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+.rv.on{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+
+  /* Hero: flow layout on mobile — no absolute positioning */
+  #hero{
+    min-height:100vh;
+    padding:0 1.5rem 3rem;
+    justify-content:flex-end;
+  }
+  .hero-ghost{display:none;}
+  .hero-top{
+    position:relative;
+    top:auto;left:auto;right:auto;
+    display:flex;align-items:flex-start;justify-content:space-between;
+    padding-top:5.5rem;
+    margin-bottom:2.5rem;
+  }
+  .hero-name{font-size:clamp(4rem,18vw,7rem);}
+
+  .sec-wrap{padding:5rem 1.5rem;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem;}
+  .skills-hex-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-band{grid-template-columns:1fr;}
+  .stat-cell{border-right:none;border-bottom:1px solid rgba(0,0,0,.15);padding:2rem 2rem;}
+  .stat-cell:last-child{border-bottom:none;}
+  .proj-row{grid-template-columns:3.5rem 1fr;gap:1.5rem;}
+  .proj-arr{display:none;}
+  footer{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:500px){
+  .skills-hex-grid{grid-template-columns:1fr;}
+  .hero-top{flex-direction:column;gap:.8rem;}
+  .hero-loc{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ldr-stage" id="ldrStage" style="position:relative;">
+    <span id="ldrType"></span>
+  </div>
+  <div class="ldr-track"><div class="ldr-fill" id="ldrFill"></div></div>
+  <div class="ldr-label">initializing<span class="ldr-dots"><span>.</span><span>.</span><span>.</span></span></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"><div id="cur-dot"></div></div>
+<div id="cur-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#hero">PK<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <a class="nav-cta" href="https://wa.me/919869571994" target="_blank"><span>Hire Me ↗</span></a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-ghost">PRIYANSHU</div>
+
+  <div class="hero-top">
+    <div class="hero-badge">Available for work</div>
+    <div class="hero-loc">
+      Mumbai, India<br>
+      <span>Zoho Developer · 3+ Yrs</span>
+    </div>
+  </div>
+
+  <h1 class="hero-name">
+    PRIYANSHU<em>KHALE.</em>
+  </h1>
+
+  <div class="hero-bottom">
+    <p class="hero-desc">
+      Building <strong>enterprise-grade Zoho solutions</strong> — from CRM automation
+      to custom Creator apps — that turn complex requirements into clean, working systems.
+    </p>
+    <div class="hero-btns">
+      <a class="btn-a" href="https://www.linkedin.com/in/priyanshu-khale-a25777222/" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn-a" href="https://wa.me/919869571994" target="_blank" style="background:transparent;border:1px solid #25D366;color:#25D366;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn-b" href="#contact">Contact ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Zoho Creator <span></span></span>
+    <span class="marquee-item">Zoho CRM <span></span></span>
+    <span class="marquee-item">Zoho Analytics <span></span></span>
+    <span class="marquee-item">Zoho One <span></span></span>
+    <span class="marquee-item">Deluge Script <span></span></span>
+    <span class="marquee-item">Wireframing <span></span></span>
+    <span class="marquee-item">API Integration <span></span></span>
+    <span class="marquee-item">Mumbai, India <span></span></span>
+    <span class="marquee-item">Zoho Creator <span></span></span>
+    <span class="marquee-item">Zoho CRM <span></span></span>
+    <span class="marquee-item">Zoho Analytics <span></span></span>
+    <span class="marquee-item">Zoho One <span></span></span>
+    <span class="marquee-item">Deluge Script <span></span></span>
+    <span class="marquee-item">Wireframing <span></span></span>
+    <span class="marquee-item">API Integration <span></span></span>
+    <span class="marquee-item">Mumbai, India <span></span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-wrap">
+    <div class="sec-tag rv">01 — About</div>
+    <h2 class="sec-h rv">Turning Business<br>Needs Into <em>Zoho</em><br>Reality.</h2>
+    <div class="about-grid">
+      <div class="about-body">
+        <p class="rv">I'm a <strong>Zoho Developer based in Mumbai, India</strong> with 3+ years of deep hands-on experience across the entire Zoho ecosystem. I specialize in turning complex, messy business requirements into clean, scalable solutions that actually work in production.</p>
+        <p class="rv">From architecting <strong>Zoho Creator apps</strong> with Deluge scripting to building <strong>CRM automation pipelines</strong> and custom analytics dashboards — I've delivered 5–6 full end-to-end projects that went from whiteboard sketches to live systems.</p>
+        <p class="rv">I think in systems. Every workflow I build is designed to reduce manual work, eliminate errors, and give teams visibility over their data in real time.</p>
+      </div>
+      <div class="about-terminal rv">
+        <div class="at-bar">
+          <div class="at-dot" style="background:#FF5F57"></div>
+          <div class="at-dot" style="background:#FEBC2E"></div>
+          <div class="at-dot" style="background:#28C840"></div>
+          <span class="at-title">priyanshu ~ whoami</span>
+        </div>
+        <div class="at-body">
+          <div class="at-row"><span class="at-p">$</span><span class="at-c">// identity.json</span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">name</span><span class="at-v">Priyanshu Khale</span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">role</span><span class="at-v">Zoho Developer</span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">exp</span><span class="at-v">3+ years</span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">location</span><span class="at-v">Mumbai, India</span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">phone</span><span class="at-v"><a href="tel:+919869571994">+91 98695 71994</a></span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">linkedin</span><span class="at-v"><a href="https://www.linkedin.com/in/priyanshu-khale-a25777222/" target="_blank">/in/priyanshu-khale</a></span></div>
+          <div class="at-row"><span class="at-p">›</span><span class="at-k">whatsapp</span><span class="at-v"><a href="https://wa.me/919869571994" target="_blank">chat now ↗</a></span></div>
+          <div class="at-row" style="margin-top:.4rem"><span class="at-p">›</span><span class="at-k">status</span><span class="at-v" style="color:#3DBA5F;">open_to_work ✓</span></div>
+          <div class="at-row"><span class="at-p">$</span><span class="at-c">// ready <span class="ldr-caret"></span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stat-cell">
+    <div class="stat-big" id="s1">0</div>
+    <div class="stat-lbl">Years of experience</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-big" id="s2">0</div>
+    <div class="stat-lbl">Projects delivered</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-big" id="s3">0</div>
+    <div class="stat-lbl">Zoho apps mastered</div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-wrap">
+    <div class="sec-tag rv">02 — Skills</div>
+    <h2 class="sec-h rv">The <em>Stack</em><br>I Live In.</h2>
+    <div class="skills-intro rv">
+      <p>Six core disciplines. Every one of them battle-tested across real projects with real deadlines and real clients.</p>
+    </div>
+    <div class="skills-hex-grid">
+      <div class="skill-hex rv" data-pct="92">
+        <div class="sh-num">01</div>
+        <div class="sh-name">ZOHO CREATOR</div>
+        <div class="sh-sub">Low-code application development, Deluge scripting, mobile apps, custom forms and workflows</div>
+        <div class="sh-bar"><div class="sh-fill"></div></div>
+        <div class="sh-pct">92%</div>
+      </div>
+      <div class="skill-hex rv" data-pct="88">
+        <div class="sh-num">02</div>
+        <div class="sh-name">ZOHO CRM</div>
+        <div class="sh-sub">Custom modules, blueprint configurations, sales automation, API integrations</div>
+        <div class="sh-bar"><div class="sh-fill"></div></div>
+        <div class="sh-pct">88%</div>
+      </div>
+      <div class="skill-hex rv" data-pct="83">
+        <div class="sh-num">03</div>
+        <div class="sh-name">ZOHO ANALYTICS</div>
+        <div class="sh-sub">BI dashboards, custom reports, multi-source data blending, executive KPI views</div>
+        <div class="sh-bar"><div class="sh-fill"></div></div>
+        <div class="sh-pct">83%</div>
+      </div>
+      <div class="skill-hex rv" data-pct="85">
+        <div class="sh-num">04</div>
+        <div class="sh-name">ZOHO ONE</div>
+        <div class="sh-sub">Full-suite cross-app integration, Zoho Flow, Books, Inventory and more</div>
+        <div class="sh-bar"><div class="sh-fill"></div></div>
+        <div class="sh-pct">85%</div>
+      </div>
+      <div class="skill-hex rv" data-pct="80">
+        <div class="sh-num">05</div>
+        <div class="sh-name">WIREFRAMING</div>
+        <div class="sh-sub">End-to-end project design, stakeholder flow mapping, prototype to production</div>
+        <div class="sh-bar"><div class="sh-fill"></div></div>
+        <div class="sh-pct">80%</div>
+      </div>
+      <div class="skill-hex rv" data-pct="78">
+        <div class="sh-num">06</div>
+        <div class="sh-name">BEST PRACTICES</div>
+        <div class="sh-sub">Code documentation, version control discipline, scalable architecture patterns</div>
+        <div class="sh-bar"><div class="sh-fill"></div></div>
+        <div class="sh-pct">78%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-wrap">
+    <div class="sec-tag rv">03 — Work</div>
+    <h2 class="sec-h rv">Selected<br><em>Projects.</em></h2>
+    <div class="proj-list">
+      <div class="proj-row rv">
+        <div class="proj-n">01</div>
+        <div>
+          <div class="proj-name">CRM AUTOMATION PIPELINE</div>
+          <div class="proj-desc">End-to-end sales process automation using Zoho CRM — custom modules, multi-stage blueprints, workflow rules, and email triggers. Reduced manual operations by 40% for a B2B client.</div>
+          <div class="proj-pills"><span class="pill">Zoho CRM</span><span class="pill">Blueprint</span><span class="pill">Workflow</span><span class="pill">Automation</span></div>
+        </div>
+        <div class="proj-arr">→</div>
+      </div>
+      <div class="proj-row rv">
+        <div class="proj-n">02</div>
+        <div>
+          <div class="proj-name">BUSINESS INTELLIGENCE DASHBOARD</div>
+          <div class="proj-desc">Multi-source analytics system in Zoho Analytics — live KPI dashboards, custom tabular reports, and scheduled data blends for real-time executive decision-making.</div>
+          <div class="proj-pills"><span class="pill">Zoho Analytics</span><span class="pill">BI</span><span class="pill">Data Viz</span><span class="pill">Reporting</span></div>
+        </div>
+        <div class="proj-arr">→</div>
+      </div>
+      <div class="proj-row rv">
+        <div class="proj-n">03</div>
+        <div>
+          <div class="proj-name">FIELD SERVICE MOBILE APP</div>
+          <div class="proj-desc">Zoho Creator mobile application for on-site technicians — job assignment, geo-tagged attendance, real-time status updates, and manager approval workflows.</div>
+          <div class="proj-pills"><span class="pill">Zoho Creator</span><span class="pill">Mobile</span><span class="pill">Deluge</span><span class="pill">Geo-location</span></div>
+        </div>
+        <div class="proj-arr">→</div>
+      </div>
+      <div class="proj-row rv">
+        <div class="proj-n">04</div>
+        <div>
+          <div class="proj-name">INVENTORY MANAGEMENT SYSTEM</div>
+          <div class="proj-desc">Custom inventory tracker on Zoho Creator integrated with Zoho Books — automated reorder triggers, supplier management, purchase order generation, and stock alerts.</div>
+          <div class="proj-pills"><span class="pill">Zoho Creator</span><span class="pill">Zoho Books</span><span class="pill">Integration</span><span class="pill">Automation</span></div>
+        </div>
+        <div class="proj-arr">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="sec-tag rv">04 — Contact</div>
+        <h2 class="contact-big rv">GOT A<em>PROJECT?</em></h2>
+        <p class="contact-sub rv">Let's build something that works. Whether it's a fresh Zoho system, an optimization, or just an idea on paper — reach out and let's talk.</p>
+        <div class="rv">
+          <a class="btn-a" href="https://wa.me/919869571994" target="_blank" style="font-size:.72rem;">Start the Conversation →</a>
+        </div>
+      </div>
+      <div class="contact-links rv">
+        <a class="clink" href="https://www.linkedin.com/in/priyanshu-khale-a25777222/" target="_blank">
+          <div class="clink-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0077B5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+          <div><div class="clink-title">LINKEDIN</div><div class="clink-val">linkedin.com/in/priyanshu-khale-a25777222</div></div>
+        </a>
+        <a class="clink" href="https://wa.me/919869571994" target="_blank">
+          <div class="clink-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div><div class="clink-title">WHATSAPP</div><div class="clink-val">+91 98695 71994 — message now</div></div>
+        </a>
+        <a class="clink" href="tel:+919869571994">
+          <div class="clink-ico" style="color:var(--amber)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div><div class="clink-title">PHONE</div><div class="clink-val">+91 98695 71994</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-copy">© 2024 <span>Priyanshu Khale</span> — Zoho Developer — Mumbai, India</div>
+  <div class="foot-live"><div class="live-dot"></div> Available for work</div>
+</footer>
+
+<script>
+// ── LOADER ──
+(function(){
+  var fadeWords=['Bonjour','Hola','Ciao','Hallo','Olá','こんにちは','안녕하세요','你好','Привет','नमस्ते'];
+  var marathiClusters=['न','म','स्','का','र'];
+  var stage=document.getElementById('ldrStage');
+  var typeEl=document.getElementById('ldrType');
+  var fill=document.getElementById('ldrFill');
+  var loader=document.getElementById('loader');
+  var caret=document.createElement('span');
+  caret.className='ldr-caret';
+
+  function launch(){loader.classList.add('out');setTimeout(function(){loader.style.display='none';},750);}
+
+  function phase3(){
+    fill.style.width='90%';
+    var span=document.createElement('span');
+    span.style.cssText='position:absolute;font-family:var(--f3);font-size:clamp(1.8rem,5vw,3rem);color:var(--amber);letter-spacing:.06em;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s;white-space:nowrap;';
+    span.textContent='नमस्कार';
+    stage.appendChild(span);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){span.style.opacity='1';span.style.transform='translateY(0)';});});
+    setTimeout(function(){
+      span.remove();
+      typeEl.style.display='inline';
+      typeEl.innerHTML='';
+      marathiClusters.forEach(function(c){var s=document.createElement('span');s.className='mc';s.textContent=c;typeEl.appendChild(s);});
+      typeEl.appendChild(caret);
+      fill.style.width='100%';
+      setTimeout(del,700);
+    },750);
+    function del(){
+      var cls=typeEl.querySelectorAll('.mc');
+      if(cls.length>0){cls[cls.length-1].remove();setTimeout(del,160);}
+      else{setTimeout(launch,200);}
+    }
+  }
+
+  function phase2(){
+    var i=0,total=fadeWords.length;
+    function next(){
+      if(i>=total){setTimeout(phase3,80);return;}
+      var s=document.createElement('span');
+      s.style.cssText='position:absolute;font-family:var(--f3);font-size:clamp(1.8rem,5vw,3rem);color:var(--amber);letter-spacing:.06em;opacity:0;transform:translateY(8px);transition:opacity .22s,transform .22s;white-space:nowrap;';
+      s.textContent=fadeWords[i];
+      stage.appendChild(s);
+      requestAnimationFrame(function(){requestAnimationFrame(function(){s.style.opacity='1';s.style.transform='translateY(0)';});});
+      fill.style.width=(8+(i/total)*75)+'%';
+      setTimeout(function(){s.style.opacity='0';s.style.transform='translateY(-10px)';setTimeout(function(){s.remove();i++;next();},200);},280);
+    }
+    next();
+  }
+
+  function phase1(){
+    typeEl.style.display='inline';typeEl.textContent='';typeEl.appendChild(caret);
+    fill.style.width='4%';
+    var w='Hello',i=0;
+    function tin(){
+      if(i<w.length){typeEl.insertBefore(document.createTextNode(w[i]),caret);i++;setTimeout(tin,85);}
+      else{setTimeout(bs,320);}
+    }
+    function bs(){
+      var ns=Array.prototype.slice.call(typeEl.childNodes).filter(function(n){return n!==caret;});
+      if(ns.length>0){ns[ns.length-1].remove();setTimeout(bs,52);}
+      else{typeEl.style.display='none';setTimeout(phase2,90);}
+    }
+    tin();
+  }
+  setTimeout(phase1,300);
+})();
+
+// ── CURSOR ──
+var curDot=document.getElementById('cur');
+var curRing=document.getElementById('cur-ring');
+var mx=-200,my=-200,rx=-200,ry=-200;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
+(function anim(){
+  curDot.style.left=mx+'px';curDot.style.top=my+'px';
+  rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
+  curRing.style.left=rx+'px';curRing.style.top=ry+'px';
+  requestAnimationFrame(anim);
+})();
+
+// ── NAV SCROLL ──
+var nav=document.getElementById('nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);});
+
+// ── REVEAL ──
+var rv=new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){setTimeout(function(){e.target.classList.add('on');},i*80);rv.unobserve(e.target);}
+  });
+},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(el){rv.observe(el);});
+
+// ── SKILL BARS ──
+var sb=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var pct=e.target.getAttribute('data-pct');
+      var bar=e.target.querySelector('.sh-fill');
+      if(bar)setTimeout(function(){bar.style.width=pct+'%';},200);
+      sb.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+document.querySelectorAll('.skill-hex').forEach(function(c){sb.observe(c);});
+
+// ── COUNTERS ──
+function cnt(el,target,sfx){
+  var start=null,dur=1800;
+  function step(ts){
+    if(!start)start=ts;
+    var p=Math.min((ts-start)/dur,1);
+    var e=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(e*target)+sfx;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var sObs=new IntersectionObserver(function(entries){
+  if(entries[0].isIntersecting){
+    cnt(document.getElementById('s1'),3,'+');
+    cnt(document.getElementById('s2'),6,'+');
+    cnt(document.getElementById('s3'),10,'+');
+    sObs.disconnect();
+  }
+},{threshold:.5});
+var sb2=document.querySelector('.stats-band');
+if(sb2)sObs.observe(sb2);
+</script>
+</body>
+</html>

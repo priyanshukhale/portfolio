@@ -10,27 +10,28 @@
 <meta name="keywords" content="Zoho Developer Mumbai, Zoho Creator Developer, Zoho CRM Expert, Zoho Analytics, Zoho One, Deluge Script, Zoho Developer India, Priyanshu Khale, Zoho Freelancer Mumbai">
 <meta name="author" content="Priyanshu Khale">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://priyanshukhale.netlify.app/">
+<link rel="canonical" href="https://priyanshukhale.vercel.app/">
 
 <!-- ── GOOGLE SEARCH CONSOLE VERIFICATION ── -->
 
   <meta name="google-site-verification" content="bsbHz2FMsQBB9aAND_012MN3fBxMtJHxz9NcN8VpFPc" />
-
 
 <!-- ── OPEN GRAPH (WhatsApp, LinkedIn, Facebook preview) ── -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://priyanshukhale.netlify.app/">
 <meta property="og:title" content="Priyanshu Khale | Zoho Developer Mumbai">
 <meta property="og:description" content="3+ years building Zoho Creator apps, CRM automation & Analytics dashboards. Based in Mumbai, India. Available for new projects.">
-<meta property="og:image" content="https://priyanshukhale.netlify.app/og-preview.png">
+<meta property="og:image" content="https://priyanshukhale.vercel.app/og-preview.png">
 <meta property="og:locale" content="en_IN">
-<meta property="og:site_name" content="Priyanshu Khale Portfolio">
+<meta property="og:site_name" content="Priyanshu Khale — Zoho Developer">
+<meta property="og:url" content="https://priyanshukhale.vercel.app/">
 
 <!-- ── TWITTER CARD ── -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Priyanshu Khale | Zoho Developer Mumbai">
 <meta name="twitter:description" content="3+ years building Zoho Creator apps, CRM automation & Analytics dashboards. Based in Mumbai, India.">
-<meta name="twitter:image" content="https://priyanshukhale.netlify.app/og-preview.png">
+<meta name="twitter:image" content="https://priyanshukhale.vercel.app/og-preview.png">
+<meta name="twitter:site" content="Priyanshu Khale">
 
 <!-- ── STRUCTURED DATA (Google Rich Results) ── -->
 <script type="application/ld+json">
@@ -86,16 +87,32 @@ body::before{
 }
 
 /* ── CUSTOM CURSOR ── */
-#cur{position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;}
-#cur-dot{width:8px;height:8px;background:var(--amber2);border-radius:50%;transform:translate(-50%,-50%);}
+#cur-dot{position:fixed;pointer-events:none;z-index:9999;
+  width:8px;height:8px;border-radius:50%;background:var(--amber);
+  transform:translate(-50%,-50%);}
 #cur-ring{position:fixed;pointer-events:none;z-index:9998;
-  width:40px;height:40px;border-radius:50%;
-  border:1px solid rgba(232,130,12,0.5);
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(232,130,12,0.45);
   transform:translate(-50%,-50%);
-  transition:width .3s,height .3s,border-color .3s;
-}
+  transition:width .25s,height .25s,border-color .25s;}
 body:has(a:hover) #cur-ring,
-body:has(button:hover) #cur-ring{width:60px;height:60px;border-color:var(--amber);}
+body:has(button:hover) #cur-ring{width:56px;height:56px;border-color:var(--amber);}
+#cur-coords{
+  position:fixed;pointer-events:none;z-index:9997;
+  transform:translate(18px,6px);
+  display:flex;flex-direction:column;gap:3px;
+  opacity:0;transition:opacity .2s;
+}
+#cur-coords.show{opacity:1;}
+.cc-row{
+  display:flex;align-items:center;gap:5px;
+  background:rgba(4,4,4,0.82);
+  border:1px solid rgba(232,130,12,0.3);
+  padding:3px 9px;
+}
+.cc-axis{font-family:var(--f3);font-size:10px;color:var(--amber);min-width:12px;letter-spacing:.05em;}
+.cc-val{font-family:var(--f3);font-size:12px;color:var(--ink);min-width:34px;text-align:right;}
+#cur-trail{position:fixed;inset:0;pointer-events:none;z-index:9996;}
 
 /* ── LOADER ── */
 #loader{
@@ -383,6 +400,51 @@ footer{
 .foot-live{display:flex;align-items:center;gap:.5rem;font-family:var(--f3);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);}
 .live-dot{width:6px;height:6px;border-radius:50%;background:#3DBA5F;box-shadow:0 0 8px rgba(61,186,95,.7);animation:blink 2.5s infinite;}
 
+
+}
+
+/* ── FLOATING DOCK ── */
+#dock{
+  position:fixed;
+  bottom:-80px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:800;
+  display:flex;
+  align-items:center;
+  background:#111113;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:100px;
+  padding:5px 6px;
+  gap:2px;
+  opacity:0;
+  transition:bottom .45s cubic-bezier(.16,1,.3,1), opacity .35s ease;
+  pointer-events:none;
+}
+#dock.show{bottom:24px;opacity:1;pointer-events:all;}
+.dk{
+  font-family:var(--f3);
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(245,236,215,0.35);
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:100px;
+  transition:color .15s, background .15s;
+  white-space:nowrap;
+  line-height:1;
+}
+.dk:hover{color:rgba(245,236,215,0.8);background:rgba(255,255,255,0.06);}
+.dk.on{color:#050508;background:var(--amber);}
+.dk-sep{width:1px;height:12px;background:rgba(255,255,255,0.08);flex-shrink:0;margin:0 1px;}
+@media(max-width:600px){
+  #dock{padding:4px 5px;bottom:-70px;}
+  #dock.show{bottom:16px;}
+  .dk{font-size:9px;padding:7px 10px;}
+  .dk-sep{display:none;}
+}
+
 /* ── REVEAL ── */
 .rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
 .rv.on{opacity:1;transform:translateY(0);}
@@ -392,21 +454,27 @@ footer{
   nav{padding:1rem 1.5rem;}
   .nav-links{display:none;}
 
-  /* Hero: flow layout on mobile — no absolute positioning */
   #hero{
     min-height:100vh;
     padding:0 1.5rem 3rem;
-    justify-content:flex-end;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
   }
   .hero-ghost{display:none;}
   .hero-top{
     position:relative;
     top:auto;left:auto;right:auto;
     display:flex;align-items:flex-start;justify-content:space-between;
-    padding-top:5.5rem;
-    margin-bottom:2.5rem;
+    padding-top:4.8rem;
+    margin-bottom:auto;
   }
-  .hero-name{font-size:clamp(4rem,18vw,7rem);}
+  .hero-name{
+    font-size:clamp(4rem,18vw,7rem);
+    margin-top:auto;
+    padding-top:2rem;
+  }
+  .hero-bottom{margin-top:1.5rem;}
 
   .sec-wrap{padding:5rem 1.5rem;}
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem;}
@@ -420,8 +488,9 @@ footer{
 }
 @media(max-width:500px){
   .skills-hex-grid{grid-template-columns:1fr;}
-  .hero-top{flex-direction:column;gap:.8rem;}
+  .hero-top{flex-direction:column;gap:.6rem;padding-top:4.5rem;margin-bottom:0;}
   .hero-loc{text-align:left;}
+  .hero-name{padding-top:1.5rem;margin-top:1.5rem;}
 }
 </style>
 </head>
@@ -437,8 +506,13 @@ footer{
 </div>
 
 <!-- CURSOR -->
-<div id="cur"><div id="cur-dot"></div></div>
+<div id="cur-dot"></div>
 <div id="cur-ring"></div>
+<canvas id="cur-trail"></canvas>
+<div id="cur-coords">
+  <div class="cc-row"><span class="cc-axis">X</span><span class="cc-val" id="cc-x">0</span></div>
+  <div class="cc-row"><span class="cc-axis">Y</span><span class="cc-val" id="cc-y">0</span></div>
+</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -696,6 +770,20 @@ footer{
   <div class="foot-live"><div class="live-dot"></div> Available for work</div>
 </footer>
 
+
+<!-- DOCK -->
+<div id="dock">
+  <a class="dk on" href="#hero">Home</a>
+  <div class="dk-sep"></div>
+  <a class="dk" href="#about">About</a>
+  <div class="dk-sep"></div>
+  <a class="dk" href="#skills">Skills</a>
+  <div class="dk-sep"></div>
+  <a class="dk" href="#projects">Work</a>
+  <div class="dk-sep"></div>
+  <a class="dk" href="#contact">Contact</a>
+</div>
+
 <script>
 // ── LOADER ──
 (function(){
@@ -767,14 +855,55 @@ footer{
 })();
 
 // ── CURSOR ──
-var curDot=document.getElementById('cur');
+var curDot=document.getElementById('cur-dot');
 var curRing=document.getElementById('cur-ring');
+var curCoords=document.getElementById('cur-coords');
+var ccX=document.getElementById('cc-x');
+var ccY=document.getElementById('cc-y');
+var trailCanvas=document.getElementById('cur-trail');
+var tCtx=trailCanvas.getContext('2d');
 var mx=-200,my=-200,rx=-200,ry=-200;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
+var trail=[];
+var hasEntered=false;
+
+function resizeTrail(){trailCanvas.width=window.innerWidth;trailCanvas.height=window.innerHeight;}
+resizeTrail();
+window.addEventListener('resize',resizeTrail);
+
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX;my=e.clientY;
+  if(!hasEntered){hasEntered=true;curCoords.classList.add('show');}
+  ccX.textContent=Math.round(mx);
+  ccY.textContent=Math.round(my);
+  var flip=mx>window.innerWidth*0.78;
+  curCoords.style.transform=flip?'translate(calc(-100% - 18px),6px)':'translate(18px,6px)';
+  trail.push({x:mx,y:my,t:Date.now()});
+  if(trail.length>80)trail.shift();
+});
+
+document.addEventListener('mouseleave',function(){trail=[];});
+
 (function anim(){
   curDot.style.left=mx+'px';curDot.style.top=my+'px';
-  rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
+  rx+=(mx-rx)*.12;ry+=(my-ry)*.12;
   curRing.style.left=rx+'px';curRing.style.top=ry+'px';
+  curCoords.style.left=mx+'px';curCoords.style.top=my+'px';
+
+  tCtx.clearRect(0,0,trailCanvas.width,trailCanvas.height);
+  var now=Date.now();
+  trail=trail.filter(function(p){return now-p.t<500;});
+  for(var i=1;i<trail.length;i++){
+    var age=(now-trail[i].t)/500;
+    var alpha=(1-age)*0.45;
+    var lw=(1-age)*2.5;
+    tCtx.beginPath();
+    tCtx.moveTo(trail[i-1].x,trail[i-1].y);
+    tCtx.lineTo(trail[i].x,trail[i].y);
+    tCtx.strokeStyle='rgba(232,130,12,'+alpha+')';
+    tCtx.lineWidth=lw;
+    tCtx.lineCap='round';
+    tCtx.stroke();
+  }
   requestAnimationFrame(anim);
 })();
 
@@ -825,6 +954,30 @@ var sObs=new IntersectionObserver(function(entries){
 },{threshold:.5});
 var sb2=document.querySelector('.stats-band');
 if(sb2)sObs.observe(sb2);
+
+// ── DOCK ──
+var dk=document.getElementById('dock');
+var dkItems=dk.querySelectorAll('.dk');
+var secIds=['hero','about','skills','projects','contact'];
+var secEls2=secIds.map(function(id){return document.getElementById(id);});
+
+window.addEventListener('scroll',function(){
+  var past=window.scrollY>(window.innerHeight*0.55);
+  dk.classList.toggle('show',past);
+  var mid=window.scrollY+window.innerHeight/2;
+  var cur=0;
+  secEls2.forEach(function(el,i){if(el&&el.offsetTop<=mid)cur=i;});
+  dkItems.forEach(function(item,i){item.classList.toggle('on',i===cur);});
+},{passive:true});
+
+dkItems.forEach(function(item){
+  item.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(item.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
 </script>
 </body>
 </html>
